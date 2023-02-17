@@ -2,6 +2,7 @@ package com.mjc.stage2.impl;
 
 
 import com.mjc.stage2.Connection;
+import com.sun.tools.javac.Main;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -24,6 +25,7 @@ public class ConnectionPool {
                 .map(ProxyConnection::new)
                 .forEach(freeConnections::offer);
     }
+
 
     public static ConnectionPool getInstance() {
         if (instance == null) {
